@@ -1,4 +1,4 @@
-function dea(num) {
+function deaCheck(num) {
   const regType = {
     a: 'Hospital/Prescriber/Pharmacy (deprecated)',
     b: 'Hospital/Clinic',
@@ -49,15 +49,4 @@ function dea(num) {
 
 }
 
-function assert(a, b) {
-  if (a === b) {
-    return 'PASSED';
-  } else {
-    return 'FAILED';
-  }
-}
-
-let trueTest1 = assert(dea('BT6835752'), true);
-let trueTest2 = assert(dea('AD0865937'), true);
-console.log(trueTest1);
-console.log(treuTest2);
+module.exports.deaCheck = deaCheck;
