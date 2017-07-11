@@ -29,8 +29,10 @@ function calcComparison(nums) {
   // process comparison number
   let step3 = step1 + step2;
   step3 = step3.toString();
-  step3 = step3[step3.length - 1];
-  step3 = parseInt(step3);
+  let last = step3[step3.length - 1];
+  last = parseInt(last);
+
+  return last;
 }
 
 // Main algorithm
@@ -78,12 +80,8 @@ function deaCheck(num) {
   if (num.length !== 9 || nums.length !== 6) {
     return 'length';
   }
-  if (!areLetters(num.slice())) {
-    return 'letter';
-  }
-
-  if (!areDigits(num.slice(2))) {
-    return 'num';
+  if (!areLetters(num.slice(0, 2)) || !areDigits(num.slice(2))) {
+    return 'chars';
   }
 
   // invalid type
@@ -92,6 +90,7 @@ function deaCheck(num) {
   }
 
   const comp = calcComparison(nums);
+  console.log('comp' + comp + 'check ' + check)
   // validate step3 with comparison number
   if (comp === check) {
     return 'valid';
