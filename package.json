@@ -1,0 +1,11 @@
+{
+  "name": "dea-validate",
+  "version": "1.0.0",
+  "description": "DEA number validation application",
+  "main": "dea-calc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Makowski",
+  "license": "ISC"
+}
