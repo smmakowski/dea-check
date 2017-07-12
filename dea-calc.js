@@ -65,7 +65,12 @@ function isValidType(str) {
   return true;
 }
 
-function deaCheck(num) {
+function isValidName(lastName, initial) {
+  const last = lastName[0].toLowerCase();
+  return last === initial;
+}
+
+function deaCheck(num, lastName) {
   // process nums
   const chars = num.split('');
   const type = num[0].toLowerCase();
@@ -87,6 +92,10 @@ function deaCheck(num) {
   // invalid type
   if (!isValidType(type)) {
     return 'type';
+  }
+
+  if (!isValidName(lastName, lastInitial)) {
+    return 'name';
   }
 
   const comp = calcComparison(nums);

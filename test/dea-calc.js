@@ -8,7 +8,7 @@ describe('DEA Number Validation', () => {
   describe('validation of last number of sums', () => {
     it('should return "valid" if the last number of sums is equal to the check number',
     () => {
-      expect(validator.deaCheck('AP5836727'), 'Patterson').to.equal('valid');
+      expect(validator.deaCheck('AP5836727', 'Patterson')).to.equal('valid');
     });
     it('should return "comp" if the last number of sums is equal to check number',
     () => {
