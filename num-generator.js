@@ -29,6 +29,7 @@ function generateNumber() {
   const check = calcCheckNum(digits);
 
   // create DEA number from components
+  let number = '';
   number += rndCode;
   number += rndLastInitial;
   number += digitStr;
