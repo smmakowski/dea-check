@@ -8,7 +8,7 @@ const generator = require('../num-generator.js');
 describe('DEA Number Generator', () => {
     it('should return a random DEA number as a string',
     () => {
-      expect((typeof generator.generateNumber()).to.equal('string');
+      expect((typeof generator.generateNumber()).to.equal('string'));
     });
     it('should return a valid DEA number when checked by the validator function',
     () => {
@@ -16,6 +16,4 @@ describe('DEA Number Generator', () => {
       const last = rand[1];
       expect(validator.deaCheck(rand, last)).to.equal('valid');
     });
-  });
-
 });
